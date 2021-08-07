@@ -359,7 +359,6 @@ interface LocalRayResult {
   attribute LocalShapeInfo m_localShapeInfo;
   [Value] attribute btVector3 m_hitNormalLocal;
   attribute float m_hitFraction;
-  attribute unsigned long m_flags;
 };
 
 [Prefix="btCollisionWorld::"]
@@ -1731,6 +1730,10 @@ interface btCollisionWorld {
   void contactPairTest(btCollisionObject colObjA, btCollisionObject colObjB, [Ref] ContactResultCallback resultCallback);
   void contactTest(btCollisionObject colObj, [Ref] ContactResultCallback resultCallback);
   void updateSingleAabb(btCollisionObject colObj);
+  void setDebugDrawer(btIDebugDraw debugDrawer);
+  btIDebugDraw getDebugDrawer();
+  void debugDrawWorld();
+  void debugDrawObject([Const, Ref] btTransform worldTransform, [Const] btCollisionShape shape, [Const, Ref] btVector3 color);
 };
 
 interface btContactSolverInfo {
