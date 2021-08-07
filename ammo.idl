@@ -1062,6 +1062,7 @@ interface btSoftBody {
   [Const] float getTotalMass();
   void setTotalMass( float mass, boolean fromfaces);
   void setMass(long node, float mass);
+  void setPose(boolean bvolume, boolean bframe);
   void transform( [Const, Ref] btTransform trs);
   void translate( [Const, Ref] btVector3 trs);
   void rotate( [Const, Ref] btQuaternion rot);
