@@ -2457,4 +2457,5 @@ if (typeof exports === 'object' && typeof module === 'object')
       define([], function() { return Ammo; });
     else if (typeof exports === 'object')
       exports["Ammo"] = Ammo;
-    
+    export default Ammo;
+
