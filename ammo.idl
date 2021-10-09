@@ -939,6 +939,7 @@ btTriangleMeshShape implements btConcaveShape;
 
 
 interface btTriangleInfoMap {
+    void btTriangleInfoMap();
 };
 
 interface btBvhTriangleMeshShape {
