@@ -937,9 +937,15 @@ interface btTriangleMeshShape {
 };
 btTriangleMeshShape implements btConcaveShape;
 
+
+interface btTriangleInfoMap {
+};
+
 interface btBvhTriangleMeshShape {
   void btBvhTriangleMeshShape(btStridingMeshInterface meshInterface, boolean useQuantizedAabbCompression, optional boolean buildBvh);
   void btBvhTriangleMeshShape(btStridingMeshInterface meshInterface, boolean useQuantizedAabbCompression, [Const, Ref] btVector3 bvhAabbMin, [Const, Ref] btVector3 bvhAabbMax, optional boolean buildBvh);
+
+  void generateInternalEdgeInfo(btTriangleInfoMap triangleInfoMap);
 };
 btBvhTriangleMeshShape implements btTriangleMeshShape;
 
